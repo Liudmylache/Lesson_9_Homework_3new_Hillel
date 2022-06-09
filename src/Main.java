@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -14,7 +15,7 @@ public class Main {
 
         System.out.println("Your text is: " + newReversedString);
 
-        if (newReversedString.equals(input)) {
+        if (newReversedString.equals(input.toUpperCase().toLowerCase())) {
             isPalindromeMessage();
             return;
         }
@@ -41,6 +42,5 @@ public class Main {
    public static void isNotPalindromeMessage() {
         System.out.println("No, it is not a palindrome :(");
     }
-
 
 }
